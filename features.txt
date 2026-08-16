@@ -1,0 +1,13 @@
+features:
+1. Project Overview & Categories
+Project Goal: 
+A personalized educational ecosystem that researches topics (e.g., Python) through the lens of user interests (e.g., Marvel), generates study artifacts (.org, html, anki, ppt), and utilizes a persona-based Teacher Agent for interaction.
+Agent Categorization (per ADK patterns):
+Master Agent (Orchestrator): 
+Loop Agent. It cycles between user input, delegating tasks, and reviewing outputs. It maintains the conversation state.
+Research Agent:
+ Sequential Agent. It must finish the Deep Research first to establish context before the Parallel Research or Artifact Generation can begin.
+Artifact Agent: 
+Parallel Agent. It can spawn multiple sub-workers (HTML, PPT, Anki) to generate different file formats simultaneously based on the same research report.
+Teacher Agent:
+ Loop Agent. It maintains a continuous conversational loop with the user for Q&A.
